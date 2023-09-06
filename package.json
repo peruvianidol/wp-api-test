@@ -15,6 +15,7 @@
     "node-fetch": "^2.6.12"
   },
   "dependencies": {
-    "dotenv": "^16.3.1"
+    "dotenv": "^16.3.1",
+    "luxon": "^3.3.0"
   }
 }

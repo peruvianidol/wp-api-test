@@ -9,5 +9,8 @@ layout: base.njk
 
 <article>
   <h1>{{ posts.title }}</h1>
+  <p><time datetime="{{ posts.date | w3Date }}">{{ posts.date | longDate }}</time></p>
+  <p>by {{posts.author.name}}</p>
+
   {{ posts.content | safe }}
 </article>
