@@ -9,7 +9,7 @@ title: Latest Posts
 <ol>
   {%- for item in pagination.items %}
     <li>
-      <a href="/posts/{{ item.title | slug }}">
+      <a href="posts/{{ item.title | slug }}">
         {{ item.title }}</a>
     </li>
   {% endfor -%}
