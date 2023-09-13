@@ -2,27 +2,19 @@
 pagination:
   data: posts.posts
   size: 2
-layout: base.njk
-title: TQU
 ---
 
-<h1>TQU</h1>
-
-{% include "partials/pages-list.njk" %}
-
-<ul>
+<ol>
   {%- for item in pagination.items %}
     <li>
       <a href="posts/{{ item.title | slug }}">
         {{ item.title }}</a>
     </li>
   {% endfor -%}
-</ul>
-
-{% if (pagination.href.previous) or (pagination.href.next) %}
+</ol>
 
 <nav>
-  <ul>
+  <ol>
     <li>
       {% if pagination.href.previous %}
         <a href="{{ pagination.href.previous }}">Previous</a>
@@ -39,7 +31,5 @@ title: TQU
         <a href="{{ pagination.href.next }}">Next</a>
       {% else %}Next{% endif %}
     </li>
-  </ul>
+  </ol>
 </nav>
-
-{% endif %}

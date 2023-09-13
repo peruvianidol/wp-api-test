@@ -1,0 +1,14 @@
+---
+pagination:
+  data: pages.posts
+  size: 1
+  alias: pagina
+permalink: "tqu/{{ pagina.title | slug }}/"
+layout: base.njk
+---
+
+<article>
+  <h1>{{ pagina.title }}</h1>
+
+  {{ pagina.content | safe }}
+</article>
